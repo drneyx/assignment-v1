@@ -31,6 +31,33 @@ body {
     color: $secondary-color;
 }
 
+.header-section{
+
+    .top {
+        border-bottom: thin solid $accent-color;
+    }
+
+    .product-title{
+        font-weight: wight(medium);
+        font-size: large;
+    }
+}
+
+.content-section{
+    min-height: 90vh;
+    overflow-y: scroll;
+   
+
+    #{&}-products{
+        // border: thin solid $accent-color;
+
+    }
+}
+
+.text-accent{
+    color: $accent-color;
+}
+
 .main{
     @include flexCenter(row);
     width: 80%;

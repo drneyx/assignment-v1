@@ -10,6 +10,22 @@ body {
   color: #fff;
 }
 
+.header-section .top {
+  border-bottom: thin solid #df4848;
+}
+.header-section .product-title {
+  font-weight: 500;
+  font-size: large;
+}
+
+.content-section {
+  min-height: 90vh;
+  overflow-y: scroll;
+}
+.text-accent {
+  color: #df4848;
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
