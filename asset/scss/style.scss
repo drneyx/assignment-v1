@@ -1,7 +1,56 @@
-$primary-color: #272727;
-$accent-color: #df4848;
-$text-color: #fff;
+@import './resets';
+@import './variables';
 
+@function wight($wight-name){
+    @return map-get($font-wights, $wight-name);
+}
+
+@mixin flexCenter($direction){
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: $direction
+}
+
+
+@mixin theme($light-theme: true){
+    @if $light-theme{
+        background: lighten($primary-color, 100%) !important;
+        color: darken($secondary-color, 100%) !important;
+    }
+}
+
+@mixin  mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+    
+}
 body {
-    background-color: blue;
+    background: $primary-color;
+    color: $secondary-color;
+}
+
+.main{
+    @include flexCenter(row);
+    width: 80%;
+    margin: 0 auto;
+
+    #{&}-page-section{
+        font-weight: wight(regular)
+    }
+
+    #{&}-page-section2{
+        @extend .main-page-section;
+    }
+
+
+    @include mobile{
+        flex-direction: column;
+    }
+}
+
+
+.light {
+    @include theme(true)
 }
