@@ -7,13 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container d-flex flex-grow-1">
-        <div class="w-100 d-flex mt-3">
-            <div class="d-flex justify-content-start align-items-start">
+    <div class="container d-flex">
+        <div class="w-100 d-flex mt-3 py-3">
+            <div class="d-flex p-2 justify-content-start align-items-start">
                 Product List
             </div>
-            <div class="ms-auto  d-flex justify-content-end align-items-end">
-                Product List
+            <div class="ms-auto  d-flex justify-content-end align-items-start">
+                <div class="p-2">Add</div>
+                <div class="p-2">Mass delete</div>
             </div>
         </div>
     </div>
