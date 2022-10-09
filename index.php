@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Product List</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="asset/dist/css/style.css">
 </head>
@@ -12,16 +13,15 @@
     <header class="header-section">
         <div class="container flex-grow-1 d-flex mt-4">
             <div class="w-100 d-flex justify-content-between mt-3 top">
-                <div class="d-flex justify-content-start align-items-start">
+                <div class="d-flex justify-content-start align-items-start py-2">
                     <span class="product-title">Product List</span>
                 </div>
-                <div class="ms-auto flex-row d-flex justify-content-between align-items-start">
-                    <div class="">
-                        <button class="btn">Add</button>
-                    </div>
-                    <div class="">
-                        <button class="btn"> Mass delete</button>
-                    </div>
+                <div class="ms-auto w-25 d-flex justify-content-between align-items-start py-2">
+                    <button class="btn btn-sm btn-default product-button-inline mx-2">
+                        <i class="fa fa-plus mx-2"></i>
+                        <span>Add</span>
+                    </button>
+                    <button class="btn btn-sm btn-default product-button text-nowrap"> Mass delete</button>
                 </div>
             </div>
         </div>

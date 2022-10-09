@@ -5,6 +5,16 @@
     @return map-get($font-wights, $wight-name);
 }
 
+
+@mixin buttons($background, $color){
+    background-color: $background;
+    border-radius: 5px;
+    font-size: medium;
+    width: 60%;
+    color: $color;
+}
+
+
 @mixin flexCenter($direction){
      display: flex;
      justify-content: center;
@@ -39,9 +49,24 @@ body {
 
     .product-title{
         font-weight: wight(medium);
-        font-size: large;
+        font-size: x-large;
     }
 }
+
+.product-button {
+   @include buttons($accent-color, $secondary-color)
+}
+
+.product-button-inline {
+    @include buttons($secondary-color, $accent-color);
+    border: thin solid $accent-color;
+ }
+
+ .btn:hover{
+    @include buttons($secondary-color, $accent-color);
+    border: thin solid $accent-color;
+ }
+
 
 .content-section{
     min-height: 90vh;

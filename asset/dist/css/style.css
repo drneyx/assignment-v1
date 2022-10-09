@@ -15,7 +15,33 @@ body {
 }
 .header-section .product-title {
   font-weight: 500;
-  font-size: large;
+  font-size: x-large;
+}
+
+.product-button {
+  background-color: #df4848;
+  border-radius: 5px;
+  font-size: medium;
+  width: 60%;
+  color: #fff;
+}
+
+.product-button-inline {
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: medium;
+  width: 60%;
+  color: #df4848;
+  border: thin solid #df4848;
+}
+
+.btn:hover {
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: medium;
+  width: 60%;
+  color: #df4848;
+  border: thin solid #df4848;
 }
 
 .content-section {
