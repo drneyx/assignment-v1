@@ -1,6 +1,8 @@
 @import './resets';
 @import './variables';
 
+
+/*  functions and mixins for reusability */
 @function wight($wight-name){
     @return map-get($font-wights, $wight-name);
 }
