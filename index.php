@@ -27,105 +27,105 @@
     </header>
     
     <!-- Product List Section -->
-    <section class="content-section container">
-        <div class="w-100 d-flex content-section-products mt-2">
-            <div class="row">
-                <div class="col-6 col-md-3 mb-3 d-flex align-items-center justify-content-center">
-                    <div class="card product-box">
-                        <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
-                            <span>
-                                <i class="fas fa-play-circle"></i>
-                            </span>
-                        </a>
+    <section class="content-section">
+        <div class="container">
+            <div class="w-100 d-flex justify-content-center align-items-center content-section-products mt-2">
+                <div class="row mx-0 mt-3">
+                    <div class="col-6 col-md-3 mb-3 d-flex align-items-center justify-content-center product-box">
+                         <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                        <div class="d-flex align-items-sm-start justify-content-md-start my-4 flex-column ">
+                            <p class="card-text my-0">165 views - 58 hours ago</p>
+                            <p class="card-text my-0">165 views - 58 hours ago</p>
+                            <p class="card-text my-0">165 views - 58 hours ago</p>
+                            <p class="card-text my-0">165 views - 58 hours ago</p>
+                        </div>
                     </div>
-                    <div class="d-flex align-items-sm-start justify-content-md-start flex-column mt-2">
-                        <h4 class="arial-regular-normal-ship-gray-20px">Tax payer introduction</h4>
-                        <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 58 hours ago</p>
+                    <div class="col-6 col-md-3 mb-3 intros text-start">
+                        <div class="card video-box bg-white">
+                            <img src="images/ura-cargo.jpg" alt="video illutration" class="img-fluid">
+                            <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
+                                <span>
+                                    <i class="fas fa-play-circle"></i>
+                                </span>
+                                <span class="border-animation border-animation--border-1"></span>
+                                <span class="border-animation border-animation--border-2"></span>
+                                <span class="border-animation border-animation--border-3"></span>
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-sm-start justify-content-md-start flex-column mt-2">
+                            <h4 class="arial-regular-normal-ship-gray-20px">How to register tin</h4>
+                            <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 58 hours ago</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-3 mb-3 intros text-start">
-                    <div class="card video-box bg-white">
-                        <img src="images/ura-cargo.jpg" alt="video illutration" class="img-fluid">
-                        <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
-                            <span>
-                                <i class="fas fa-play-circle"></i>
-                            </span>
-                            <span class="border-animation border-animation--border-1"></span>
-                            <span class="border-animation border-animation--border-2"></span>
-                            <span class="border-animation border-animation--border-3"></span>
-                        </a>
+                    <div class="col-6 col-md-3 mb-3 intros text-start">
+                        <div class="card video-box bg-white">
+                            <img src="images/ura-handover-to-works.png" alt="video illutration" class="img-fluid">
+                            <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
+                                <span>
+                                    <i class="fas fa-play-circle"></i>
+                                </span>
+                                <span class="border-animation border-animation--border-1"></span>
+                                <span class="border-animation border-animation--border-2"></span>
+                                <span class="border-animation border-animation--border-3"></span>
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-sm-start justify-content-md-start flex-column mt-2">
+                            <h4 class="arial-regular-normal-ship-gray-20px">How to register tin</h4>
+                            <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 4 Years ago</p>
+                        </div>
                     </div>
-                    <div class="d-flex align-items-sm-start justify-content-md-start flex-column mt-2">
-                        <h4 class="arial-regular-normal-ship-gray-20px">How to register tin</h4>
-                        <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 58 hours ago</p>
+                    <div class="col-6 col-md-3 mb-3 intros text-start">
+                        <div class="card video-box bg-white">
+                            <img src="images/ura-handover-to-works.png" alt="video illutration" class="img-fluid">
+                            <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
+                                <span>
+                                    <i class="fas fa-play-circle"></i>
+                                </span>
+                                <span class="border-animation border-animation--border-1"></span>
+                                <span class="border-animation border-animation--border-2"></span>
+                                <span class="border-animation border-animation--border-3"></span>
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-sm-start justify-content-md-start flex-column mt-2">
+                            <h4 class="arial-regular-normal-ship-gray-20px">Custom tax inclusion</h4>
+                            <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 58 hours ago</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-3 mb-3 intros text-start">
-                    <div class="card video-box bg-white">
-                        <img src="images/ura-handover-to-works.png" alt="video illutration" class="img-fluid">
-                        <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
-                            <span>
-                                <i class="fas fa-play-circle"></i>
-                            </span>
-                            <span class="border-animation border-animation--border-1"></span>
-                            <span class="border-animation border-animation--border-2"></span>
-                            <span class="border-animation border-animation--border-3"></span>
-                        </a>
+                    <div class="col-6 col-md-3 mb-3 intros text-start">
+                        <div class="card video-box bg-white">
+                            <img src="images/ura-thank-you.jpg" alt="video illutration" class="img-fluid">
+                            <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
+                                <span>
+                                    <i class="fas fa-play-circle"></i>
+                                </span>
+                                <span class="border-animation border-animation--border-1"></span>
+                                <span class="border-animation border-animation--border-2"></span>
+                                <span class="border-animation border-animation--border-3"></span>
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-sm-start justify-content-md-start flex-column mt-2">
+                            <h4 class="arial-regular-normal-ship-gray-20px">Ura thank you inclusion</h4>
+                            <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 1 hours ago</p>
+                        </div>
                     </div>
-                    <div class="d-flex align-items-sm-start justify-content-md-start flex-column mt-2">
-                        <h4 class="arial-regular-normal-ship-gray-20px">How to register tin</h4>
-                        <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 4 Years ago</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mb-3 intros text-start">
-                    <div class="card video-box bg-white">
-                        <img src="images/ura-handover-to-works.png" alt="video illutration" class="img-fluid">
-                        <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
-                            <span>
-                                <i class="fas fa-play-circle"></i>
-                            </span>
-                            <span class="border-animation border-animation--border-1"></span>
-                            <span class="border-animation border-animation--border-2"></span>
-                            <span class="border-animation border-animation--border-3"></span>
-                        </a>
-                    </div>
-                    <div class="d-flex align-items-sm-start justify-content-md-start flex-column mt-2">
-                        <h4 class="arial-regular-normal-ship-gray-20px">Custom tax inclusion</h4>
-                        <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 58 hours ago</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mb-3 intros text-start">
-                    <div class="card video-box bg-white">
-                        <img src="images/ura-thank-you.jpg" alt="video illutration" class="img-fluid">
-                        <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
-                            <span>
-                                <i class="fas fa-play-circle"></i>
-                            </span>
-                            <span class="border-animation border-animation--border-1"></span>
-                            <span class="border-animation border-animation--border-2"></span>
-                            <span class="border-animation border-animation--border-3"></span>
-                        </a>
-                    </div>
-                    <div class="d-flex align-items-sm-start justify-content-md-start flex-column mt-2">
-                        <h4 class="arial-regular-normal-ship-gray-20px">Ura thank you inclusion</h4>
-                        <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 1 hours ago</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mb-3 intros text-start">
-                    <div class="card video-box bg-white">
-                        <img src="images/ura-digital-service.png" alt="video illutration" class="img-fluid">
-                        <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
-                            <span>
-                                <i class="fas fa-play-circle"></i>
-                            </span>
-                            <span class="border-animation border-animation--border-1"></span>
-                            <span class="border-animation border-animation--border-2"></span>
-                            <span class="border-animation border-animation--border-3"></span>
-                        </a>
-                    </div>
-                    <div class="d-flex align-items-sm-start justify-content-md-start flex-column mt-2">
-                        <h4 class="arial-regular-normal-ship-gray-20px">Ura Digital sevice</h4>
-                        <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 3 days ago</p>
+                    <div class="col-6 col-md-3 mb-3 intros text-start">
+                        <div class="card video-box bg-white">
+                            <img src="images/ura-digital-service.png" alt="video illutration" class="img-fluid">
+                            <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
+                                <span>
+                                    <i class="fas fa-play-circle"></i>
+                                </span>
+                                <span class="border-animation border-animation--border-1"></span>
+                                <span class="border-animation border-animation--border-2"></span>
+                                <span class="border-animation border-animation--border-3"></span>
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-sm-start justify-content-md-start flex-column mt-2">
+                            <h4 class="arial-regular-normal-ship-gray-20px">Ura Digital sevice</h4>
+                            <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 3 days ago</p>
+                        </div>
                     </div>
                 </div>
             </div>

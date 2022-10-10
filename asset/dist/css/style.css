@@ -98,6 +98,10 @@ body {
   color: black !important;
 }
 
+.product-box {
+  border: 0.15rem solid #272727;
+}
+
 .footer-section {
   min-height: 6vh;
   border-top: thin solid #df4848;
