@@ -98,9 +98,6 @@ body {
   color: black !important;
 }
 
-.product-box {
-  border: 0.15rem solid #272727;
-}
 .product-box .inner-box {
   position: relative;
 }
