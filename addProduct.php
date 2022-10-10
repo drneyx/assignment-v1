@@ -18,9 +18,9 @@
                 </div>
                 <div class="ms-auto group-button  d-flex justify-content-between align-items-start py-2">
                     <button class="btn btn-sm btn-default product-button-inline mx-2">
-                        <span>Add</span>
+                        <span>save</span>
                     </button>
-                    <button class="btn btn-sm btn-default product-button text-nowrap"> Mass delete</button>
+                    <button class="btn btn-sm btn-default product-button text-nowrap"> Cancel</button>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
 
-                    <div id="furniture">
+                    <div id="furniture" class="d-none">
                         <div class="row mb-3">
                             <label for="height" class="col-sm-2 col-form-label">Height (CM)</label>
                             <div class="col-sm-4">
