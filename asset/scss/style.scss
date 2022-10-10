@@ -1,6 +1,8 @@
 @import './resets';
 @import './variables';
 
+
+/*  functions and mixins for reusability */
 @function wight($wight-name){
     @return map-get($font-wights, $wight-name);
 }
@@ -51,6 +53,21 @@ body {
         font-weight: wight(medium);
         font-size: x-large;
     }
+
+    .group-button{
+        width: 25% !important;
+
+        @include mobile{
+            width:50% !important;
+        }
+    }
+
+    .icon{
+        @include mobile{
+            display: none;
+        }
+
+    }
 }
 
 .product-button {
@@ -69,7 +86,7 @@ body {
 
 
 .content-section{
-    min-height: 90vh;
+    min-height: 78vh;
     overflow-y: scroll;
    
 
@@ -105,4 +122,31 @@ body {
 
 .light {
     @include theme(true)
+}
+
+
+.product-box{
+    // border: thin solid $primary-color;
+
+    .inner-box{
+        position: relative;
+    }
+
+    .check-form{
+        position: absolute;
+        top: .1rem;
+        left: 1rem;
+    }
+    #delete-checkbox:focus{
+        box-shadow: none !important;
+    }
+    .form-check-input:checked{
+        border-color: $accent-color !important;
+        background-color: $accent-color !important;
+    }
+}
+
+.footer-section{
+    min-height: 6vh;
+    border-top: thin solid $accent-color;
 }
