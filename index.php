@@ -36,7 +36,7 @@
 
     <footer>
         <div class="container">
-            <div class="d-flex justify-content-center border">
+            <div class="d-flex justify-content-center footer-section">
 
             </div>
         </div>

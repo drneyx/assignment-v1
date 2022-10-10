@@ -124,3 +124,8 @@ body {
     @include theme(true)
 }
 
+
+.footer-section{
+    min-height: 5vh;
+    border-top: thin solid $accent-color;
+}

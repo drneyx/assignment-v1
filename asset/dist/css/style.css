@@ -96,4 +96,9 @@ body {
 .light {
   background: white !important;
   color: black !important;
+}
+
+.footer-section {
+  min-height: 5vh;
+  border-top: thin solid #df4848;
 }/*# sourceMappingURL=style.css.map */
