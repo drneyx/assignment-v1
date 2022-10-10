@@ -51,6 +51,21 @@ body {
         font-weight: wight(medium);
         font-size: x-large;
     }
+
+    .group-button{
+        width: 25% !important;
+
+        @include mobile{
+            width:50% !important;
+        }
+    }
+
+    .icon{
+        @include mobile{
+            display: none;
+        }
+
+    }
 }
 
 .product-button {
@@ -69,7 +84,7 @@ body {
 
 
 .content-section{
-    min-height: 90vh;
+    min-height: 80vh;
     overflow-y: scroll;
    
 
@@ -106,3 +121,4 @@ body {
 .light {
     @include theme(true)
 }
+
