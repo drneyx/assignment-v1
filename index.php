@@ -30,7 +30,7 @@
     <section class="content-section">
         <div class="container">
             <div class="w-100 content-section-products mt-2">
-                <div class="row mx-0 gx-0 mt-3 w-100">
+                <div class="row">
                     <div class="col-6 col-md-3 mb-3">
                         <div class="card product-box">
                             <div class="d-flex align-items-center justify-content-center inner-box">
@@ -47,91 +47,53 @@
                         </div>
                     </div>
 
-                    <div class="col-6 col-md-3  mb-3 product-box">
-                        <div class="d-flex align-items-center justify-content-center inner-box">
-                            <div class="form-check mt-2 check-form">
-                                <input class="form-check-input" type="checkbox" id="delete-checkbox" value="" id="flexCheckDefault">
-                            </div>
-                            <div class="d-flex align-items-sm-start justify-content-md-start my-4 flex-column ">
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-3 mb-3  product-box">
-                        <div class="d-flex align-items-center justify-content-center inner-box">
-                            <div class="form-check mt-2 check-form">
-                                <input class="form-check-input" type="checkbox" id="delete-checkbox" value="" id="flexCheckDefault">
-                            </div>
-                            <div class="d-flex align-items-sm-start justify-content-md-start my-4 flex-column ">
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
+                    <div class="col-6 col-md-3 mb-3">
+                        <div class="card product-box">
+                            <div class="d-flex align-items-center justify-content-center inner-box">
+                                <div class="form-check mt-2 check-form">
+                                    <input class="form-check-input" type="checkbox" id="delete-checkbox" value="" id="flexCheckDefault">
+                                </div>
+                                <div class="d-flex align-items-sm-start justify-content-md-start my-4 flex-column ">
+                                    <small class="card-text my-0">165 views - 58 hours ago</small>
+                                    <small class="card-text my-0">165 views - 58 hours ago</small>
+                                    <small class="card-text my-0">165 views - 58 hours ago</small>
+                                    <small class="card-text my-0">165 views - 58 hours ago</small>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-6 col-md-3 mb-3  product-box">
-                        <div class="d-flex align-items-center justify-content-center inner-box">
-                            <div class="form-check mt-2 check-form">
-                                <input class="form-check-input" type="checkbox" id="delete-checkbox" value="" id="flexCheckDefault">
-                            </div>
-                            <div class="d-flex align-items-sm-start justify-content-md-start my-4 flex-column ">
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-3 mb-3  product-box">
-                        <div class="d-flex align-items-center justify-content-center inner-box">
-                            <div class="form-check mt-2 check-form">
-                                <input class="form-check-input" type="checkbox" id="delete-checkbox" value="" id="flexCheckDefault">
-                            </div>
-                            <div class="d-flex align-items-sm-start justify-content-md-start my-4 flex-column ">
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
+                    <div class="col-6 col-md-3 mb-3">
+                        <div class="card product-box">
+                            <div class="d-flex align-items-center justify-content-center inner-box">
+                                <div class="form-check mt-2 check-form">
+                                    <input class="form-check-input" type="checkbox" id="delete-checkbox" value="" id="flexCheckDefault">
+                                </div>
+                                <div class="d-flex align-items-sm-start justify-content-md-start my-4 flex-column ">
+                                    <small class="card-text my-0">165 views - 58 hours ago</small>
+                                    <small class="card-text my-0">165 views - 58 hours ago</small>
+                                    <small class="card-text my-0">165 views - 58 hours ago</small>
+                                    <small class="card-text my-0">165 views - 58 hours ago</small>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-
-                    <div class="col-6 col-md-3 mb-3  product-box">
-                        <div class="d-flex align-items-center justify-content-center inner-box">
-                            <div class="form-check mt-2 check-form">
-                                <input class="form-check-input" type="checkbox" id="delete-checkbox" value="" id="flexCheckDefault">
-                            </div>
-                            <div class="d-flex align-items-sm-start justify-content-md-start my-4 flex-column ">
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-3 mb-3  product-box">
-                        <div class="d-flex align-items-center justify-content-center inner-box">
-                            <div class="form-check mt-2 check-form">
-                                <input class="form-check-input" type="checkbox" id="delete-checkbox" value="" id="flexCheckDefault">
-                            </div>
-                            <div class="d-flex align-items-sm-start justify-content-md-start my-4 flex-column ">
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
-                                <small class="card-text my-0">165 views - 58 hours ago</small>
+                    <div class="col-6 col-md-3 mb-3">
+                        <div class="card product-box">
+                            <div class="d-flex align-items-center justify-content-center inner-box">
+                                <div class="form-check mt-2 check-form">
+                                    <input class="form-check-input" type="checkbox" id="delete-checkbox" value="" id="flexCheckDefault">
+                                </div>
+                                <div class="d-flex align-items-sm-start justify-content-md-start my-4 flex-column ">
+                                    <small class="card-text my-0">165 views - 58 hours ago</small>
+                                    <small class="card-text my-0">165 views - 58 hours ago</small>
+                                    <small class="card-text my-0">165 views - 58 hours ago</small>
+                                    <small class="card-text my-0">165 views - 58 hours ago</small>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
