@@ -30,7 +30,7 @@
     <section class="content-section">
         <div class="container">
             <div class="w-100 content-section-products mt-2">
-                <form>
+                <form class="mt-3">
                     <div class="row mb-3">
                         <label for="sku" class="col-sm-2 col-form-label">SKU</label>
                         <div class="col-sm-4">
@@ -61,10 +61,40 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row mb-3">
+                    <div class="row mb-3 d-none" id="dvd" >
                         <label for="size" class="col-sm-2 col-form-label">size(MB)</label>
                         <div class="col-sm-4">
                             <input type="number" class="form-control" id="size">
+                        </div>
+                    </div>
+
+                    <div id="furniture">
+                        <div class="row mb-3">
+                            <label for="height" class="col-sm-2 col-form-label">Height (CM)</label>
+                            <div class="col-sm-4">
+                                <input type="number" class="form-control" id="height">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="height" class="col-sm-2 col-form-label">Width (CM)</label>
+                            <div class="col-sm-4">
+                                <input type="number" class="form-control" id="height">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="height" class="col-sm-2 col-form-label">Length (CM)</label>
+                            <div class="col-sm-4">
+                                <input type="number" class="form-control" id="height">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 d-none" id="book" >
+                        <label for="weight" class="col-sm-2 col-form-label">Weight(Kg)</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" id="weight">
                         </div>
                     </div>
                 </form>
