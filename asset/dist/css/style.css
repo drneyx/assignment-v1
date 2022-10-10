@@ -57,7 +57,7 @@ body {
 }
 
 .content-section {
-  min-height: 80vh;
+  min-height: 78vh;
   overflow-y: scroll;
 }
 .text-accent {
@@ -99,6 +99,6 @@ body {
 }
 
 .footer-section {
-  min-height: 5vh;
+  min-height: 6vh;
   border-top: thin solid #df4848;
 }/*# sourceMappingURL=style.css.map */

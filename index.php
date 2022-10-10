@@ -36,8 +36,8 @@
 
     <footer>
         <div class="container">
-            <div class="d-flex justify-content-center footer-section">
-
+            <div class="d-flex justify-content-center align-items-center footer-section">
+                <div class="align-self-center">Scandiweb Test assignment</div>
             </div>
         </div>
     </footer>
