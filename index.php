@@ -18,7 +18,6 @@
                 </div>
                 <div class="ms-auto group-button  d-flex justify-content-between align-items-start py-2">
                     <button class="btn btn-sm btn-default product-button-inline mx-2">
-                        <i class="fa fa-plus mx-2 icon"></i>
                         <span>Add</span>
                     </button>
                     <button class="btn btn-sm btn-default product-button text-nowrap"> Mass delete</button>
@@ -31,16 +30,12 @@
     <section class="content-section container">
         <div class="w-100 d-flex content-section-products mt-2">
             <div class="row">
-                <div class="col-md-3 mb-3 intros text-start">
-                    <div class="card video-box bg-white">
-                        <img src="images/ura-test-guy.png" alt="video illutration" class="img-fluid">
+                <div class="col-6 col-md-3 mb-3 d-flex align-items-center justify-content-center">
+                    <div class="card product-box">
                         <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
                             <span>
                                 <i class="fas fa-play-circle"></i>
                             </span>
-                            <span class="border-animation border-animation--border-1"></span>
-                            <span class="border-animation border-animation--border-2"></span>
-                            <span class="border-animation border-animation--border-3"></span>
                         </a>
                     </div>
                     <div class="d-flex align-items-sm-start justify-content-md-start flex-column mt-2">
@@ -48,7 +43,7 @@
                         <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 58 hours ago</p>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3 intros text-start">
+                <div class="col-6 col-md-3 mb-3 intros text-start">
                     <div class="card video-box bg-white">
                         <img src="images/ura-cargo.jpg" alt="video illutration" class="img-fluid">
                         <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
@@ -65,7 +60,7 @@
                         <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 58 hours ago</p>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3 intros text-start">
+                <div class="col-6 col-md-3 mb-3 intros text-start">
                     <div class="card video-box bg-white">
                         <img src="images/ura-handover-to-works.png" alt="video illutration" class="img-fluid">
                         <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
@@ -82,7 +77,7 @@
                         <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 4 Years ago</p>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3 intros text-start">
+                <div class="col-6 col-md-3 mb-3 intros text-start">
                     <div class="card video-box bg-white">
                         <img src="images/ura-handover-to-works.png" alt="video illutration" class="img-fluid">
                         <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
@@ -99,7 +94,7 @@
                         <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 58 hours ago</p>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3 intros text-start">
+                <div class="col-6 col-md-3 mb-3 intros text-start">
                     <div class="card video-box bg-white">
                         <img src="images/ura-thank-you.jpg" alt="video illutration" class="img-fluid">
                         <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
@@ -116,7 +111,7 @@
                         <p class="card-text arial-regular-normal-ship-gray-10px">165 views - 1 hours ago</p>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3 intros text-start">
+                <div class="col-6 col-md-3 mb-3 intros text-start">
                     <div class="card video-box bg-white">
                         <img src="images/ura-digital-service.png" alt="video illutration" class="img-fluid">
                         <a href="play-video.html" class="glightbox position-absolute top-50 start-50 translate-middle">
