@@ -127,6 +127,24 @@ body {
 
 .product-box{
     border: .15rem solid $primary-color;
+    width: 90%;
+
+    .inner-box{
+        position: relative;
+    }
+
+    .check-form{
+        position: absolute;
+        top: .1rem;
+        left: 1rem;
+    }
+    #delete-checkbox:focus{
+        box-shadow: none !important;
+    }
+    .form-check-input:checked{
+        border-color: $accent-color !important;
+        background-color: $accent-color !important;
+    }
 }
 
 .footer-section{
