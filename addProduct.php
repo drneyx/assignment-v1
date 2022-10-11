@@ -17,9 +17,7 @@
                     <span class="product-title">Product Add</span>
                 </div>
                 <div class="ms-auto group-button  d-flex justify-content-between align-items-start py-2">
-                    <button class="btn btn-sm btn-default product-button-inline mx-2">
-                        <span>Save</span>
-                    </button>
+                    <button id="addProduct" class="btn btn-sm btn-default product-button-inline mx-2">Save</button>
                     <button class="btn btn-sm btn-default product-button text-nowrap"> Cancel</button>
                 </div>
             </div>
@@ -35,18 +33,21 @@
                         <label for="sku" class="col-sm-2 col-form-label">SKU</label>
                         <div class="col-sm-4">
                             <input type="text" class="form-control" id="sku">
+                            <small class="text-danger d-none" id="skuCheck">Please, Enter SKU</small>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label for="name" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-4">
                             <input type="text" class="form-control" id="name">
+                            <small class="text-danger d-none" id="nameCheck">Please, enter the name of the product</small>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label for="price" class="col-sm-2 col-form-label">Price($)</label>
                         <div class="col-sm-4">
                             <input type="number" class="form-control" id="price">
+                            <small class="text-danger d-none" id="priceCheck">Please, enter the price of the product</small>
                         </div>
                     </div>
 
@@ -59,10 +60,11 @@
                                 <option value="Furniture">Furniture</option>
                                 <option value="Book">Book</option>
                             </select>
+                            <small class="text-danger d-none" id="typeCheck">Please, select the product Type</small>
                         </div>
                     </div>
                     <div class="d-none" id="dvd">
-                        <div class="row mb-3 d-none" >
+                        <div class="row mb-3">
                             <label for="size" class="col-sm-2 col-form-label">Size(MB)</label>
                             <div class="col-sm-4">
                                 <input type="number" class="form-control" id="size">
@@ -157,6 +159,100 @@
                 $('#furniture').addClass('d-none');
                 $('#book').addClass('d-none');
             }
+        });
+
+
+        $(document).ready(function () {
+            // Validate SKU
+            let skuError = true;
+            $("#sku").on("keyup", function(){
+                validateSKU();
+            });
+            function validateSKU() {
+                let skuValue = $("#sku").val();
+                if (skuValue.length == 0) {
+                    $("#skuCheck").removeClass('d-none');
+                    skuError = false;
+                    return false;
+                }else {
+                    $("#skuCheck").addClass('d-none');
+                }
+            }
+
+            // Validate Name
+            let nameError = true;
+            $("#name").keyup(function () {
+                validateName();
+            });
+        
+            function validateName() {
+                let nameValue = $("#name").val();
+                if (nameValue.length == "") {
+                    $("#nameCheck").removeClass('d-none');
+                    nameError = false;
+                return false;
+                }else {
+                    $("#nameCheck").addClass('d-none');
+                }
+            }
+        
+            // Validate Price
+            let priceError = true;
+            $("#price").keyup(function () {
+                validatePrice();
+            });
+            function validatePrice() {
+                let priceValue = $("#price").val();
+                let regex = /^(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?$/;
+                if (priceValue.length == "") {
+                    $("#priceCheck").removeClass('d-none');
+                    priceError = false;
+                    return false;
+                }
+                else if (regex.test(priceValue)) {
+                    $("#priceCheck").removeClass('d-none');
+                    $("#priceCheck").html("Please, enter a valid price");
+                    $("#priceCheck").css("color", "red");
+                    priceError = false;
+                    return false;
+                } else {
+                    $("#priceCheck").hide();
+                }
+            }
+
+
+            // Validate Product type
+            $("#typecheck").hide();
+            let typeError = true;
+            $("#productType").keyup(function () {
+                validateProductType();
+            });
+        
+            function validateProductType() {
+                let typeValue = $("#productType").val();
+                if (typeValue.length == "") {
+                    $("#typecheck").show();
+                    typeError = false;
+                return false;
+                }else {
+                    $("#typecheck").hide();
+                }
+            }
+        
+        
+        // Submit button
+        $("#addProduct").click(function () {
+            validateSKU();
+            validateName();
+            if (skuError == true) {
+                console.log("DATA IS SAFE");
+                return true;
+            } 
+            else {
+                console.log("DATA IS not SAFE");
+                return false;
+            }
+        });
         });
     </script>
 </body>
