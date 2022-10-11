@@ -14,11 +14,11 @@
         <div class="container flex-grow-1 d-flex mt-4">
             <div class="w-100 d-flex justify-content-between mt-3 top">
                 <div class="d-flex justify-content-start align-items-start py-2">
-                    <span class="product-title">Product List</span>
+                    <span class="product-title">Product Add</span>
                 </div>
                 <div class="ms-auto group-button  d-flex justify-content-between align-items-start py-2">
                     <button class="btn btn-sm btn-default product-button-inline mx-2">
-                        <span>save</span>
+                        <span>Save</span>
                     </button>
                     <button class="btn btn-sm btn-default product-button text-nowrap"> Cancel</button>
                 </div>
@@ -54,7 +54,7 @@
                         <label for="productType" class="col-sm-2 col-form-label">Type Switcher</label>
                         <div class="col-sm-4">
                             <select class="form-select" aria-label="Default select example" id="productType">
-                                <option selected>--------select--------</option>
+                                <option selected>Select</option>
                                 <option value="DVD">DVD</option>
                                 <option value="Furniture">Furniture</option>
                                 <option value="Book">Book</option>
@@ -115,24 +115,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        /* Handle onchange event of product type */
         $('#productType').on('change', function(){
             if (this.value == "DVD" ){
                 $('#dvd').removeClass('d-none');
                 $('#furniture').addClass('d-none');
                 $('#book').addClass('d-none');
             }
-            if (this.value == "Furniture" ){
+            else if (this.value == "Furniture" ){
                 $('#dvd').addClass('d-none');
                 $('#furniture').removeClass('d-none');
                 $('#book').addClass('d-none');
             }
-
-            if (this.value == "Book" ){
+            else if (this.value == "Book" ){
                 $('#dvd').addClass('d-none');
                 $('#furniture').addClass('d-none');
                 $('#book').removeClass('d-none');
             }
-            
+            else {
+                $('#dvd').addClass('d-none');
+                $('#furniture').addClass('d-none');
+                $('#book').addClass('d-none');
+            }
         });
     </script>
 </body>
