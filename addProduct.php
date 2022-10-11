@@ -190,7 +190,7 @@
                 if (nameValue.length == "") {
                     $("#nameCheck").removeClass('d-none');
                     nameError = false;
-                return false;
+                    return false;
                 }else {
                     $("#nameCheck").addClass('d-none');
                 }
@@ -209,20 +209,20 @@
                     priceError = false;
                     return false;
                 }
-                else if (regex.test(priceValue)) {
+                /* else if (regex.test(priceValue)) {
                     $("#priceCheck").removeClass('d-none');
                     $("#priceCheck").html("Please, enter a valid price");
                     $("#priceCheck").css("color", "red");
                     priceError = false;
                     return false;
-                } else {
-                    $("#priceCheck").hide();
+                }*/
+                 else {
+                    $("#priceCheck").addClass('d-none');
                 }
             }
 
 
             // Validate Product type
-            $("#typecheck").hide();
             let typeError = true;
             $("#productType").keyup(function () {
                 validateProductType();
@@ -230,12 +230,13 @@
         
             function validateProductType() {
                 let typeValue = $("#productType").val();
-                if (typeValue.length == "") {
-                    $("#typecheck").show();
+                console.log(typeValue);
+                if (typeValue == "Select") {
+                    $("#typeCheck").removeClass('d-none');
                     typeError = false;
                 return false;
                 }else {
-                    $("#typecheck").hide();
+                    $("#typeCheck").addClass('d-none');
                 }
             }
         
@@ -244,6 +245,8 @@
         $("#addProduct").click(function () {
             validateSKU();
             validateName();
+            validatePrice();
+            validateProductType();
             if (skuError == true) {
                 console.log("DATA IS SAFE");
                 return true;
