@@ -54,15 +54,15 @@
                         <label for="productType" class="col-sm-2 col-form-label">Type Switcher</label>
                         <div class="col-sm-4">
                             <select class="form-select" aria-label="Default select example" id="productType">
-                                <option selected>---select---</option>
-                                <option value="1">DVD</option>
-                                <option value="2">Furniture</option>
-                                <option value="3">Book</option>
+                                <option selected>--------select--------</option>
+                                <option value="DVD">DVD</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Book">Book</option>
                             </select>
                         </div>
                     </div>
                     <div class="row mb-3 d-none" id="dvd" >
-                        <label for="size" class="col-sm-2 col-form-label">size(MB)</label>
+                        <label for="size" class="col-sm-2 col-form-label">Size(MB)</label>
                         <div class="col-sm-4">
                             <input type="number" class="form-control" id="size">
                         </div>
@@ -114,5 +114,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#productType').on('change', function(){
+            if (this.value == "DVD" ){
+                $('#dvd').removeClass('d-none');
+            }
+        });
+    </script>
 </body>
 </html>
