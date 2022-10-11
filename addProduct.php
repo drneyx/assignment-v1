@@ -55,7 +55,7 @@
                         <label for="productType" class="col-sm-2 col-form-label">Type Switcher</label>
                         <div class="col-sm-4">
                             <select class="form-select" aria-label="Default select example" id="productType">
-                                <option selected>Select</option>
+                                <option selected value="">Select</option>
                                 <option value="DVD">DVD</option>
                                 <option value="Furniture">Furniture</option>
                                 <option value="Book">Book</option>
@@ -73,7 +73,7 @@
                         <div class="row mb-3">
                             <div class="col-sm-2"></div>
                             <div class="col-sm-4">
-                                <small class="mt-2"><strong>Please, provide size in MB</strong></small>
+                                <small class="mt-2" id="sizeCheck" ><strong>Please, provide size in MB</strong></small>
                             </div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                         <div class="row mb-3">
                             <div class="col-sm-2"></div>
                             <div class="col-sm-4">
-                                <small><strong>Please, provide dimensions in HxWxL</strong></small>
+                                <small id="dimensionCheck"><strong>Please, provide dimensions in HxWxL</strong></small>
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                         <div class="row mb-3">
                             <div class="col-sm-2"></div>
                             <div class="col-sm-4">
-                                <small class="mt-2"><strong>Please, provide weight in Kg</strong></small>
+                                <small class="mt-2" id="wightCheck" id="weight"><strong>Please, provide weight in Kg</strong></small>
                             </div>
                         </div>
                     </div>
@@ -170,7 +170,7 @@
             });
             function validateSKU() {
                 let skuValue = $("#sku").val();
-                if (skuValue.length == 0) {
+                if (skuValue.length == "") {
                     $("#skuCheck").removeClass('d-none');
                     skuError = false;
                     return false;
@@ -184,7 +184,6 @@
             $("#name").keyup(function () {
                 validateName();
             });
-        
             function validateName() {
                 let nameValue = $("#name").val();
                 if (nameValue.length == "") {
@@ -203,59 +202,128 @@
             });
             function validatePrice() {
                 let priceValue = $("#price").val();
-                let regex = /^(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?$/;
                 if (priceValue.length == "") {
                     $("#priceCheck").removeClass('d-none');
                     priceError = false;
                     return false;
                 }
-                /* else if (regex.test(priceValue)) {
-                    $("#priceCheck").removeClass('d-none');
-                    $("#priceCheck").html("Please, enter a valid price");
-                    $("#priceCheck").css("color", "red");
-                    priceError = false;
-                    return false;
-                }*/
                  else {
                     $("#priceCheck").addClass('d-none');
+                    
+                }
+            }
+
+             // Validate size of MB if DVD is selected
+             let sizeError = true;
+            $("#size").keyup(function () {
+                validateSize();
+            });
+            function validateSize() {
+                let sizeValue = $("#size").val();
+                console.log("size is being value");
+                if (sizeValue.length == "") {
+                    $("#sizeCheck").addClass('text-danger');
+                    sizeError = false;
+                    return false;
+                }
+                 else {
+                    $("#sizeCheck").removeClass('text-danger');
+                    
+                }
+            }
+
+            // Validate Weight if Book is selected
+            let bookError = true;
+            $("#weight").keyup(function () {
+                validateBook();
+            });
+            function validateWeight() {
+                let sizeValue = $("#weight").val();
+                if (sizeValue.length == "") {
+                    $("#weightCheck").addClass('text-danger');
+                    bookError = false;
+                    return false;
+                }
+                 else {
+                    $("#weightCheck").removeClass('text-danger');
+                    
                 }
             }
 
 
+            // Validate Dimensions if Furniture is selected
+            let dimensionError = true;
+            $("#length").keyup(function () {
+                validateDimensions();
+            });
+            $("#width").keyup(function () {
+                validateDimensions();
+            });
+            $("#height").keyup(function () {
+                validateDimensions();
+            });
+            function validateDimensions() {
+                let widthValue = $("#book").val();
+                let lengthValue = $("#book").val();
+                let heightValue = $("#book").val();
+                if (widthValue.length == "" || heightValue.length == "" || lengthValue.length == "") {
+                    $("#dimensionCheck").addClass('text-danger');
+                    dimensionError = false;
+                    return false;
+                }
+                 else {
+                    $("#dimensionCheck").removeClass('text-danger')
+                    
+                }
+            }
+
             // Validate Product type
             let typeError = true;
-            $("#productType").keyup(function () {
+            $("#productType").change(function () {
                 validateProductType();
             });
-        
             function validateProductType() {
                 let typeValue = $("#productType").val();
-                console.log(typeValue);
-                if (typeValue == "Select") {
+                let sizeValue = $("#size").val();
+
+                if (typeValue.length == "") {
                     $("#typeCheck").removeClass('d-none');
                     typeError = false;
-                return false;
-                }else {
+                    return false;
+                } 
+                else if (typeValue == "DVD") {
+                    $("#typeCheck").addClass('d-none');
+                    validateSize();
+                }
+                else if (typeValue == "Furniture") {
+                    $("#typeCheck").addClass('d-none');
+                    validateDimensions();
+                }
+                else if (typeValue == "Book") {
+                    $("#typeCheck").addClass('d-none');
+                    validateWeight();
+                }
+                else {
                     $("#typeCheck").addClass('d-none');
                 }
             }
         
         
-        // Submit button
-        $("#addProduct").click(function () {
-            validateSKU();
-            validateName();
-            validatePrice();
-            validateProductType();
-            if (skuError == true) {
-                console.log("DATA IS SAFE");
-                return true;
-            } 
-            else {
-                console.log("DATA IS not SAFE");
-                return false;
-            }
-        });
+            // Submit button
+            $("#addProduct").click(function () {
+                validateSKU();
+                validateName();
+                validatePrice();
+                // validateProductType();
+                if (skuError == true && nameError == true && priceError == true) {
+                    console.log("DATA IS SAFE");
+                    return true;
+                } 
+                else {
+                    console.log("DATA IS not SAFE");
+                    return false;
+                }
+            });
         });
     </script>
 </body>
