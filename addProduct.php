@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Product List</title>
+    <title>Product Add</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="asset/dist/css/style.css">
@@ -61,10 +61,18 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row mb-3 d-none" id="dvd" >
-                        <label for="size" class="col-sm-2 col-form-label">Size(MB)</label>
-                        <div class="col-sm-4">
-                            <input type="number" class="form-control" id="size">
+                    <div class="d-none" id="dvd">
+                        <div class="row mb-3 d-none" >
+                            <label for="size" class="col-sm-2 col-form-label">Size(MB)</label>
+                            <div class="col-sm-4">
+                                <input type="number" class="form-control" id="size">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">
+                                <small class="mt-2"><strong>Please, provide size in MB</strong></small>
+                            </div>
                         </div>
                     </div>
 
@@ -75,26 +83,38 @@
                                 <input type="number" class="form-control" id="height">
                             </div>
                         </div>
-
                         <div class="row mb-3">
                             <label for="height" class="col-sm-2 col-form-label">Width (CM)</label>
                             <div class="col-sm-4">
                                 <input type="number" class="form-control" id="height">
                             </div>
                         </div>
-
                         <div class="row mb-3">
                             <label for="height" class="col-sm-2 col-form-label">Length (CM)</label>
                             <div class="col-sm-4">
                                 <input type="number" class="form-control" id="height">
                             </div>
                         </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">
+                                <small><strong>Please, provide dimensions in HxWxL</strong></small>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="row mb-3 d-none" id="book" >
-                        <label for="weight" class="col-sm-2 col-form-label">Weight(Kg)</label>
-                        <div class="col-sm-4">
-                            <input type="number" class="form-control" id="weight">
+                    <div class="d-none" id="book">
+                        <div class="row mb-3"  >
+                            <label for="weight" class="col-sm-2 col-form-label">Weight(Kg)</label>
+                            <div class="col-sm-4">
+                                <input type="number" class="form-control" id="weight">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">
+                                <small class="mt-2"><strong>Please, provide weight in Kg</strong></small>
+                            </div>
                         </div>
                     </div>
                 </form>
