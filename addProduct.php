@@ -118,7 +118,21 @@
         $('#productType').on('change', function(){
             if (this.value == "DVD" ){
                 $('#dvd').removeClass('d-none');
+                $('#furniture').addClass('d-none');
+                $('#book').addClass('d-none');
             }
+            if (this.value == "Furniture" ){
+                $('#dvd').addClass('d-none');
+                $('#furniture').removeClass('d-none');
+                $('#book').addClass('d-none');
+            }
+
+            if (this.value == "Book" ){
+                $('#dvd').addClass('d-none');
+                $('#furniture').addClass('d-none');
+                $('#book').removeClass('d-none');
+            }
+            
         });
     </script>
 </body>
