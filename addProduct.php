@@ -17,7 +17,7 @@
                     <span class="product-title">Product Add</span>
                 </div>
                 <div class="ms-auto group-button  d-flex justify-content-between align-items-start py-2">
-                    <button id="addProduct" class="btn btn-sm btn-default product-button-inline mx-2">Save</button>
+                    <button type="submit" form="product_form" class="btn btn-sm btn-default product-button-inline mx-2">Save</button>
                     <button class="btn btn-sm btn-default product-button text-nowrap"> Cancel</button>
                 </div>
             </div>
@@ -28,7 +28,7 @@
     <section class="content-section">
         <div class="container">
             <div class="w-100 content-section-products mt-2">
-                <form action=""  method="post" class="mt-3">
+                <form method="POST" id="product_form" action="includes/product.inc.php" class="mt-3">
                     <div class="row mb-3">
                         <label for="sku" class="col-sm-2 col-form-label">SKU</label>
                         <div class="col-sm-4">
@@ -305,7 +305,9 @@
         
         
             // Submit button
-            $("#addProduct").click(function () {
+            $("form").submit(function (event) {
+                event.preventDefault();
+                console.log("Submit working")
                 validateSKU();
                 validateName();
                 validatePrice();
@@ -321,20 +323,23 @@
                     'length': $("#length").val(),
                     'height': $("#height").val()
                 }
+
                 if (skuError == false && nameError == false && priceError == false && typeError == false) {
-                    $.ajax({
-                        url: 'includes/product.inc.php',
-                        type: 'POST',
-                        dataType: 'json',
-                        data: formData,
-                    }).always(function (response) {
-                        console.log(response);
-                    });
-                 } 
-                else {
+                $.ajax({
+                    type: "POST",
+                    url: "includes/product.inc.php",
+                    data: formData,
+                    dataType: "json",
+                    encode: true,
+                }).done(function (data) {
+                    console.log(data);
+                });
+                
+            }
+            else {
                     console.log("DATA IS not SAFE");
                 }
-            });
+        });
         });
     </script>
 </body>

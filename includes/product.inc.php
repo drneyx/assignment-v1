@@ -1,26 +1,28 @@
 <?php
 
-if(isset($_POST['submit'])){
 
-    // Get data from the form
-    $sku = $_POST['sku'];
-    $name = $_POST['name'];
-    $price = $_POST['price'];
-    $productType = $_POST['productType'];
+$errors = [];
+$data = [];
 
-    $size = $_POST['size'];
-    $weight = $_POST['weight'];
-    $length = $_POST['length'];
-    $width = $_POST['width'];
-    $height = $_POST['height'];
-
-    // Instantiate SignUpControl class
-    // include "../classes/dbh.class.php";
-    // include "../classes/product.class.php";
-    // include "../classes/productcontr.class.php";
-
-    echo $sku;
-    header("location: ../index.php?error=none");
-
-
+if (empty($_POST['name'])) {
+    $errors['name'] = 'Name is required.';
 }
+
+if (empty($_POST['sku'])) {
+    $errors['sku'] = 'SKU is required.';
+}
+
+if (empty($_POST['price'])) {
+    $errors['price'] = 'Price is required.';
+}
+
+
+if (!empty($errors)) {
+    $data['success'] = false;
+    $data['errors'] = $errors;
+} else {
+    $data['success'] = true;
+    $data['message'] = 'Success!';
+}
+
+echo json_encode($data);
