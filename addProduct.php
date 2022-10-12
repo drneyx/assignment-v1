@@ -88,13 +88,13 @@
                         <div class="row mb-3">
                             <label for="height" class="col-sm-2 col-form-label">Width (CM)</label>
                             <div class="col-sm-4">
-                                <input type="number" class="form-control" id="height">
+                                <input type="number" class="form-control" id="width">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="height" class="col-sm-2 col-form-label">Length (CM)</label>
                             <div class="col-sm-4">
-                                <input type="number" class="form-control" id="height">
+                                <input type="number" class="form-control" id="length">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -115,7 +115,7 @@
                         <div class="row mb-3">
                             <div class="col-sm-2"></div>
                             <div class="col-sm-4">
-                                <small class="mt-2" id="wightCheck" id="weight"><strong>Please, provide weight in Kg</strong></small>
+                                <small class="mt-2" id="weightCheck" id="weight"><strong>Please, provide weight in Kg</strong></small>
                             </div>
                         </div>
                     </div>
@@ -164,7 +164,8 @@
 
         $(document).ready(function () {
             // Validate SKU
-            let skuError = true;
+            let skuError = false;
+           
             $("#sku").on("keyup", function(){
                 validateSKU();
             });
@@ -172,15 +173,15 @@
                 let skuValue = $("#sku").val();
                 if (skuValue.length == "") {
                     $("#skuCheck").removeClass('d-none');
-                    skuError = false;
-                    return false;
+                    skuError = true;
                 }else {
                     $("#skuCheck").addClass('d-none');
+                    skuError = false;
                 }
             }
 
             // Validate Name
-            let nameError = true;
+            let nameError = false;
             $("#name").keyup(function () {
                 validateName();
             });
@@ -188,15 +189,15 @@
                 let nameValue = $("#name").val();
                 if (nameValue.length == "") {
                     $("#nameCheck").removeClass('d-none');
-                    nameError = false;
-                    return false;
+                    nameError = true;
                 }else {
                     $("#nameCheck").addClass('d-none');
+                    nameError = false;
                 }
             }
         
             // Validate Price
-            let priceError = true;
+            let priceError = false;
             $("#price").keyup(function () {
                 validatePrice();
             });
@@ -204,55 +205,50 @@
                 let priceValue = $("#price").val();
                 if (priceValue.length == "") {
                     $("#priceCheck").removeClass('d-none');
-                    priceError = false;
-                    return false;
+                    priceError = true;
                 }
                  else {
                     $("#priceCheck").addClass('d-none');
-                    
+                    priceError = false;
                 }
             }
 
+            let typeError = false;
+
              // Validate size of MB if DVD is selected
-             let sizeError = true;
             $("#size").keyup(function () {
                 validateSize();
             });
             function validateSize() {
                 let sizeValue = $("#size").val();
-                console.log("size is being value");
                 if (sizeValue.length == "") {
                     $("#sizeCheck").addClass('text-danger');
-                    sizeError = false;
-                    return false;
+                    typeError = true
                 }
                  else {
                     $("#sizeCheck").removeClass('text-danger');
+                    typeError = false
                     
                 }
             }
 
             // Validate Weight if Book is selected
-            let bookError = true;
             $("#weight").keyup(function () {
-                validateBook();
+                validateWeight();
             });
             function validateWeight() {
-                let sizeValue = $("#weight").val();
-                if (sizeValue.length == "") {
+                let weightValue = $("#weight").val();
+                if (weightValue.length == "") {
                     $("#weightCheck").addClass('text-danger');
-                    bookError = false;
-                    return false;
+                    typeError = true;
                 }
                  else {
                     $("#weightCheck").removeClass('text-danger');
-                    
+                    typeError = false;
                 }
             }
 
-
             // Validate Dimensions if Furniture is selected
-            let dimensionError = true;
             $("#length").keyup(function () {
                 validateDimensions();
             });
@@ -262,38 +258,37 @@
             $("#height").keyup(function () {
                 validateDimensions();
             });
+           
             function validateDimensions() {
-                let widthValue = $("#book").val();
-                let lengthValue = $("#book").val();
-                let heightValue = $("#book").val();
+                let widthValue = $("#width").val();
+                let lengthValue = $("#length").val();
+                let heightValue = $("#height").val();
                 if (widthValue.length == "" || heightValue.length == "" || lengthValue.length == "") {
                     $("#dimensionCheck").addClass('text-danger');
-                    dimensionError = false;
-                    return false;
+                    typeError = true;
                 }
                  else {
                     $("#dimensionCheck").removeClass('text-danger')
+                    typeError = false;
                     
                 }
             }
 
             // Validate Product type
-            let typeError = true;
             $("#productType").change(function () {
                 validateProductType();
             });
+           
             function validateProductType() {
                 let typeValue = $("#productType").val();
-                let sizeValue = $("#size").val();
-
                 if (typeValue.length == "") {
                     $("#typeCheck").removeClass('d-none');
-                    typeError = false;
-                    return false;
+                    typeError = true;
                 } 
                 else if (typeValue == "DVD") {
                     $("#typeCheck").addClass('d-none');
                     validateSize();
+
                 }
                 else if (typeValue == "Furniture") {
                     $("#typeCheck").addClass('d-none');
@@ -314,14 +309,30 @@
                 validateSKU();
                 validateName();
                 validatePrice();
-                // validateProductType();
-                if (skuError == true && nameError == true && priceError == true) {
-                    console.log("DATA IS SAFE");
-                    return true;
-                } 
+                validateProductType();
+                let formData = {
+                    'sku': $("#sku").val(),
+                    'name': $("#name").val(),
+                    'price': $("#price").val(),
+                    'productType': $("#productType").val(),
+                    'weight': $("#weight").val(),
+                    'size': $("#size").val(),
+                    'width':  $("#width").val(),
+                    'length': $("#length").val(),
+                    'height': $("#height").val()
+                }
+                if (skuError == false && nameError == false && priceError == false && typeError == false) {
+                    $.ajax({
+                        url: 'includes/product.inc.php',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: formData,
+                    }).always(function (response) {
+                        console.log(response);
+                    });
+                 } 
                 else {
                     console.log("DATA IS not SAFE");
-                    return false;
                 }
             });
         });

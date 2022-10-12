@@ -15,14 +15,11 @@ if(isset($_POST['submit'])){
     $height = $_POST['height'];
 
     // Instantiate SignUpControl class
-    include "../classes/dbh.class.php";
-    include "../classes/product.class.php";
-    include "../classes/productcontr.class.php";
+    // include "../classes/dbh.class.php";
+    // include "../classes/product.class.php";
+    // include "../classes/productcontr.class.php";
 
-    $product = new SignUpContr($user, $email, $password, $password2);
-
-    $product->signUpUser();
-
+    echo $sku;
     header("location: ../index.php?error=none");
 
 
